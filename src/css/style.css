@@ -202,6 +202,11 @@ header a {
 
 .grey-section {
     background-color: #1b1b1b;
+    transition: .4s;
+}
+
+.grey-section:hover {
+    background-color: #e9204f;
 }
 
 .border-img {
@@ -406,7 +411,7 @@ header a {
 
 .work-images {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -422,11 +427,28 @@ header a {
     height: 100%;
     background-size: cover;
     filter: grayscale(100%);
-    transition: all 0.7s;
+    transition: filter 0.3s;
+    
 }
 
 .work-image img:hover {
     filter: grayscale(60%);
+}
+
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.work-image:hover .overlay {
+    opacity: 1;
 }
 
 /* ------------------------------- */
@@ -739,7 +761,7 @@ header a {
     transition: all .4s;
 }
 
-.news-img:hover {
+.image-boxes:hover .news-img {
    filter: grayscale(40%);
 }
 
